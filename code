@@ -1,1 +1,42 @@
+#include <iostream>
+#include <vector>
+#include <random>
 
+struct Particle {
+    double x, y, z;  // Posición tridimensional
+    double vx, vy, vz;  // Velocidad en cada dirección
+};
+
+int main() {
+    const int numParticles = 1000;
+    std::vector<Particle> particles(numParticles);
+
+    // Inicializar las partículas con valores aleatorios
+    std::default_random_engine generator;
+    std::uniform_real_distribution<double> distribution(-1.0, 1.0);
+
+    for (int i = 0; i < numParticles; i++) {
+        particles[i].x = distribution(generator);
+        particles[i].y = distribution(generator);
+        particles[i].z = distribution(generator);
+        particles[i].vx = distribution(generator);
+        particles[i].vy = distribution(generator);
+        particles[i].vz = distribution(generator);
+    }
+
+    for (int i = 0; i < numParticles; i++) {
+        // Simulación del comportamiento de la partícula i
+        Particle& particle = particles[i];
+        
+        // Actualizar la posición de la partícula
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        particle.z += particle.vz;
+
+        // Realizar otras operaciones de simulación si es necesario
+    }
+
+    // Después de la simulación, puedes realizar otras tareas, como análisis de datos o visualización
+
+    return 0;
+}
