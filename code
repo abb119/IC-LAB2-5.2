@@ -1,3 +1,5 @@
+//Código no paralelizado
+
 #include <iostream>
 #include <vector>
 #include <random>
@@ -36,7 +38,3 @@ int main() {
         // Realizar otras operaciones de simulación si es necesario
     }
 
-    // Después de la simulación, puedes realizar otras tareas, como análisis de datos o visualización
-
-    return 0;
-}
