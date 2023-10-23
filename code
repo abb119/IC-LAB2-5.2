@@ -35,4 +35,5 @@ int main() {
         particle.y += particle.vy;
         particle.z += particle.vz;
     }
+}
 
