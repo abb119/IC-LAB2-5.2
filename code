@@ -34,7 +34,5 @@ int main() {
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.z += particle.vz;
-
-        // Realizar otras operaciones de simulación si es necesario
     }
 
